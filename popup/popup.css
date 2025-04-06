@@ -1,5 +1,5 @@
 body {
-    width: 300px;
+    width: 320px;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 15px;
@@ -11,42 +11,84 @@ body {
 h1 {
     font-size: 18px;
     color: #ff0000;
+    margin-bottom: 10px;
 }
-textarea {
-    width: 100%;
-    height: 80px;
-    margin: 10px 0;
-    padding: 8px;
+.input-container {
     border: 1px solid #ddd;
     border-radius: 4px;
+    padding: 8px;
+    margin: 10px 0;
+    background: white;
+}
+#tags-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+.chip {
+    background-color: #f1f1f1;
+    border-radius: 16px;
+    padding: 4px 10px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    transition: opacity 0.2s, transform 0.2s; /* Animación al eliminar */
+}
+.chip-remove {
+    margin-left: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+.chip-remove svg {
+    width: 10px;
+    height: 10px;
+    vertical-align: middle;
+}
+.chip-remove:hover {
+    background: rgba(255, 0, 0, 0.1);
+}
+.chip-remove:hover svg path {
+    stroke: #ff0000;
+}
+#tags-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 5px 0;
+}
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }
 button {
-    background-color: #ff0000;
     color: white;
     border: none;
     padding: 8px 15px;
     border-radius: 4px;
     cursor: pointer;
 }
-button:hover {
+#save-btn {
+    background-color: #ff0000;
+}
+#save-btn:hover {
     background-color: #cc0000;
+}
+#reset-btn {
+    background-color: #666;
+}
+#reset-btn:hover {
+    background-color: #555;
 }
 #status {
     color: green;
     font-size: 12px;
     margin-top: 10px;
-}
-
-.buttons {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-}
-
-#reset-btn {
-    background-color: #666; /* Color gris para diferenciarlo */
-}
-
-#reset-btn:hover {
-    background-color: #555;
 }

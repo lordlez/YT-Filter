@@ -7,7 +7,10 @@
     <div class="container">
         <h1>YT Content Filter</h1>
         <p>Ingresa palabras o tags a bloquear (separados por comas):</p>
-        <textarea id="tags-input" placeholder="Ej: pokemon, minecraft, unboxing"></textarea>
+        <div class="input-container">
+            <div id="tags-chips"></div>
+            <input type="text" id="tags-input" placeholder="Ej: pokemon, minecraft">
+        </div>
         <div class="buttons">
             <button id="save-btn">Guardar</button>
             <button id="reset-btn">Reset</button>
