@@ -1,94 +1,100 @@
 body {
     width: 320px;
+    padding: 20px 15px;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 15px;
     background-color: #f9f9f9;
+    margin: 0;
 }
+
 .container {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 h1 {
-    font-size: 18px;
-    color: #ff0000;
+    font-size: 1.3rem;
     margin-bottom: 10px;
+    color: #333;
+    width: 100%;
 }
+
+p {
+    margin: 5px 0 15px;
+    color: #555;
+    width: 100%;
+}
+
 .input-container {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 8px;
+    width: calc(100% - 30px); 
     margin: 10px 0;
-    background: white;
-}
-#tags-chips {
     display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    margin-bottom: 5px;
-}
-.chip {
-    background-color: #f1f1f1;
-    border-radius: 16px;
-    padding: 4px 10px;
-    display: flex;
-    align-items: center;
-    font-size: 12px;
-    transition: opacity 0.2s, transform 0.2s; /* Animación al eliminar */
-}
-.chip-remove {
-    margin-left: 5px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
     justify-content: center;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    transition: background 0.2s;
 }
-.chip-remove svg {
-    width: 10px;
-    height: 10px;
-    vertical-align: middle;
-}
-.chip-remove:hover {
-    background: rgba(255, 0, 0, 0.1);
-}
-.chip-remove:hover svg path {
-    stroke: #ff0000;
-}
+
 #tags-input {
     width: 100%;
-    border: none;
-    outline: none;
-    padding: 5px 0;
+    max-width: 280px;
+    padding: 10px 12px; 
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: border-color 0.2s;
 }
+
+#tags-input:focus {
+    border-color: #4285f4;
+    outline: none;
+}
+
 .buttons {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     justify-content: center;
+    margin-top: 20px;
+    width: 100%;
 }
+
 button {
-    color: white;
+    padding: 10px 18px; 
     border: none;
-    padding: 8px 15px;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+    flex: 1; 
+    max-width: 120px; 
 }
+
 #save-btn {
-    background-color: #ff0000;
+    background-color: #4CAF50;
+    color: white;
 }
+
 #save-btn:hover {
-    background-color: #cc0000;
+    background-color: #45a049;
+    transform: translateY(-1px);
 }
+
 #reset-btn {
-    background-color: #666;
+    background-color: #f44336;
+    color: white;
 }
+
 #reset-btn:hover {
-    background-color: #555;
+    background-color: #d32f2f;
+    transform: translateY(-1px);
 }
+
 #status {
-    color: green;
-    font-size: 12px;
-    margin-top: 10px;
+    margin-top: 20px;
+    color: #2e7d32;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    min-height: 20px; 
 }

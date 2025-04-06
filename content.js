@@ -1,37 +1,24 @@
-// Función para mostrar TODOS los videos
-function showAllVideos() {
-    document.querySelectorAll("ytd-video-renderer, ytd-rich-item-renderer").forEach(video => {
-        video.style.display = "";
-    });
-}
-
-// Función para ocultar videos no deseados
-function hideVideos() {
-    chrome.storage.local.get(["blockedTags"], (data) => {
-        const blockedTags = data.blockedTags || [];
-        if (blockedTags.length === 0) return;
-
-        document.querySelectorAll("ytd-video-renderer, ytd-rich-item-renderer").forEach(video => {
-            const title = video.querySelector("#video-title")?.textContent.toLowerCase();
-            const channel = video.querySelector("#channel-name")?.textContent.toLowerCase();
-            
-            if (blockedTags.some(tag => title?.includes(tag) || channel?.includes(tag))) {
-                video.style.display = "none";
-            }
+function applyFilters() {
+    chrome.storage.local.get(["blockedTags"], ({ blockedTags = [] }) => {
+        const videos = document.querySelectorAll(
+            "ytd-video-renderer, ytd-rich-item-renderer, ytd-grid-video-renderer"
+        );
+        
+        videos.forEach(video => {
+            const title = video.querySelector("#video-title")?.textContent?.toLowerCase() || "";
+            const shouldHide = blockedTags.some(tag => title.includes(tag));
+            video.style.display = shouldHide ? "none" : "";
         });
     });
 }
 
-// Observador para cambios dinámicos en la página
-const observer = new MutationObserver(hideVideos);
-observer.observe(document.body, { childList: true, subtree: true });
+applyFilters();
 
-// Escuchar mensajes desde popup.js (para reset)
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    if (request.action === "resetFilters") {
-        showAllVideos();
+new MutationObserver(applyFilters)
+    .observe(document.body, { childList: true, subtree: true });
+
+chrome.storage.onChanged.addListener((changes) => {
+    if (changes.blockedTags) {
+        applyFilters();
     }
 });
-
-// Ejecutar al cargar la página
-hideVideos();
