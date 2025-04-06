@@ -5,7 +5,7 @@ chrome.storage.local.get(["blockedTags"], ({ blockedTags }) => {
     if (blockedTags && blockedTags.length > 0) {
         tagsInput.value = blockedTags.join(", ");
     }
-});
+}); 
 
 document.getElementById("save-btn").addEventListener("click", () => {
     const tags = tagsInput.value
