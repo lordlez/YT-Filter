@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="popup.css">
 </head>
 <body>
     <div class="container">
-        <h1>YT Content Filter</h1>
-        <p>Palabras bloqueadas actualmente:</p>
+        <div class="language-switcher">
+            <button id="lang-es" class="active">ES</button>
+            <button id="lang-en">EN</button>
+        </div>
+        
+        <h1 id="title">Filtro de Contenido YT</h1>
+        <p id="label">Palabras bloqueadas actualmente:</p>
         <div class="input-container">
             <input type="text" id="tags-input" placeholder="Ej: pokemon, minecraft">
         </div>
