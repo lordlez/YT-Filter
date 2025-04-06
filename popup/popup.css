@@ -77,6 +77,15 @@ p {
     outline: none;
 }
 
+.help-text {
+    color: #666;
+    font-size: 0.8rem;
+    margin: -5px 0 8px 0;
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+}
+
 .buttons {
     display: flex;
     gap: 10px;
@@ -111,6 +120,20 @@ button {
 
 #reset-btn:hover {
     background-color: #d32f2f;
+}
+
+.paypal-form {
+    margin-top: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.paypal-button {
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+    width: 150px;
+    height: auto;
 }
 
 #status {

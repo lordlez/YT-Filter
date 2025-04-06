@@ -3,6 +3,7 @@ const translations = {
         title: "Filtro de Contenido YT",
         label: "Palabras bloqueadas actualmente:",
         placeholder: "Ej: pokemon, minecraft",
+        helpText: "(separa las palabras con una coma)",
         saveBtn: "Guardar",
         resetBtn: "Reiniciar",
         saveSuccess: "¡Filtros aplicados!",
@@ -12,6 +13,7 @@ const translations = {
         title: "YT Content Filter",
         label: "Currently blocked words:",
         placeholder: "E.g.: pokemon, minecraft",
+        helpText: "(separate words with a comma)",
         saveBtn: "Save",
         resetBtn: "Reset",
         saveSuccess: "Filters applied!",
@@ -23,6 +25,7 @@ const elements = {
     title: document.getElementById('title'),
     label: document.getElementById('label'),
     input: document.getElementById('tags-input'),
+    helpText: document.getElementById('help-text'),
     saveBtn: document.getElementById('save-btn'),
     resetBtn: document.getElementById('reset-btn'),
     status: document.getElementById('status'),
@@ -36,6 +39,7 @@ function setLanguage(lang) {
     elements.title.textContent = t.title;
     elements.label.textContent = t.label;
     elements.input.placeholder = t.placeholder;
+    elements.helpText.textContent = t.helpText;
     elements.saveBtn.textContent = t.saveBtn;
     elements.resetBtn.textContent = t.resetBtn;
     
