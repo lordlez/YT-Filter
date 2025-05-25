@@ -14,7 +14,7 @@ Esta extensión para Google Chrome te permite:
 * 🤫 **Filtrar contenido no deseado:** La extensión ocultará automáticamente los videos (basado en títulos, descripciones) o comentarios que coincidan con tus filtros.
 * 🧘 **Navegar con tranquilidad:** Disfruta de YouTube a tu manera, creando un espacio más limpio y enfocado en lo que realmente te importa.
 
-Nuestro objetivo es simple: darte el poder de personalizar tu feed y protegerte de contenido que prefieres no ver, haciendo tu navegación más placentera y productiva.
+Mi objetivo es simple: darte el poder de personalizar tu feed y protegerte de contenido que prefieres no ver, haciendo tu navegación más placentera y productiva.
 
 ---
 
@@ -29,5 +29,5 @@ Este proyecto ha sido desarrollado con las herramientas fundamentales de la web,
 ---
 
 <p align="center">
-  ✨ ¡Esperamos que disfrutes de una experiencia en YouTube más limpia y personalizada! ✨
+  ✨ ¡Espero que disfrutes de una experiencia en YouTube más limpia y personalizada! ✨
 </p>
