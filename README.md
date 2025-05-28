@@ -27,7 +27,3 @@ Este proyecto ha sido desarrollado con las herramientas fundamentales de la web,
 * ⚙️ **JavaScript:** El motor detrás de la funcionalidad, manejando la lógica de filtrado, la interacción con YouTube y la gestión de tus preferencias.
 
 ---
-
-<p align="center">
-  ✨ ¡Espero que disfrutes de una experiencia en YouTube más limpia y personalizada! ✨
-</p>
